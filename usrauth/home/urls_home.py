@@ -35,8 +35,7 @@ urlpatterns = [
            name='password_reset_confirm'), 
     path('reset_password_complete/',
           auth_views.PasswordResetCompleteView.as_view(template_name='resetpass/password_reset_done.html'),
-            name='password_reset_complete') 
-            #HTML PAGE NAME SHOULDNT BE CHANGED IN CLASS BASED VIEWS FUNCTIONS
+            name='password_reset_complete') # 
 ]
 
 '''

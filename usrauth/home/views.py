@@ -144,7 +144,7 @@ def register_verify(request):
                                      'uid': urlsafe_base64_encode(force_bytes(myuser.pk)),
                                       'token' : generate_token.make_token(myuser) }) 
             
-        utilities.send_custom_email(subject, msg2, [uemail])
+        utilities.send_custom_email(subject, msg2, uemail)
 
         return redirect('/signin') # redirect to login page --> can't login unless activated
 

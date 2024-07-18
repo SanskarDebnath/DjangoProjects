@@ -23,7 +23,7 @@ def send_demo_email_to_client():
 
 def send_custom_email(subj, msg, recipient):
     email_from  = settings.EMAIL_HOST_USER
-    to_list = recipient
+    to_list = [recipient]
     send_mail(subj, msg, email_from, to_list, fail_silently= True)
 
 
